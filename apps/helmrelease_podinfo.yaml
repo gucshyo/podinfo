@@ -21,11 +21,10 @@ spec:
       sourceRef:
         kind: HelmRepository
         name: localrepo
-        namespace: default 
-      valuesFiles:
-        - values.yaml
-  # This tells Flux WHERE to find 'values.yaml'
-  chartRef:
-    kind: GitRepository
-    [cite_start]name: podinfo        # This must match the name in your gitrepo_source.yaml
-    [cite_start]namespace: flux-system # This must match the namespace in your gitrepo_source.yaml
+        namespace: default
+  # This section tells Flux to look inside your GitRepo for the values
+  valuesFrom:
+    - kind: GitRepository
+      [cite_start]name: podinfo        # Matches name in gitrepo_source.yaml 
+      [cite_start]namespace: flux-system # Matches namespace in gitrepo_source.yaml 
+      valuesKey: apps/values.yaml # Path to the file within your Git repo 
