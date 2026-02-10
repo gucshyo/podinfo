@@ -8,12 +8,12 @@ spec:
   chart:
     spec:
       chart: podinfo
-      version: "6.3.5"
+      version: "6.6.0"
       sourceRef:
         kind: HelmRepository
         name: localrepo
         namespace: default
   valuesFrom:
-    - kind: ConfigMap
-      name: podinfo-values # Kustomize handles the suffix matching
-      valuesKey: values.yaml
+  - kind: ConfigMap
+    name: podinfo-values # Kustomize handles the suffix matching
+    valuesKey: values.yaml
