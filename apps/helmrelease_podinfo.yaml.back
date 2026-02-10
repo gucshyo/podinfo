@@ -22,9 +22,9 @@ spec:
         kind: HelmRepository
         name: localrepo
         namespace: default
-  # This tells Flux to fetch values from your GitRepository source
+  # This section tells Flux to look inside your GitRepo for the values
   valuesFrom:
     - kind: GitRepository
-      name: podinfo
-      namespace: flux-system
-      targetPath: apps/values.yaml
+      [cite_start]name: podinfo [cite: 1]       # Matches name in gitrepo_source.yaml 
+      [cite_start]namespace: flux-system [cite: 1] # Matches namespace in gitrepo_source.yaml 
+      valuesKey: apps/values.yaml # Path to the file within your Git repo 
