@@ -25,6 +25,6 @@ spec:
   # This section tells Flux to look inside your GitRepo for the values
   valuesFrom:
     - kind: GitRepository
-      [cite_start]name: podinfo        # Matches name in gitrepo_source.yaml 
-      [cite_start]namespace: flux-system # Matches namespace in gitrepo_source.yaml 
+      [cite_start]name: podinfo [cite: 1]       # Matches name in gitrepo_source.yaml 
+      [cite_start]namespace: flux-system [cite: 1] # Matches namespace in gitrepo_source.yaml 
       valuesKey: apps/values.yaml # Path to the file within your Git repo 
