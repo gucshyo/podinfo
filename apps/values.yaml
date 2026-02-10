@@ -1,4 +1,4 @@
-replicaCount: 4
+replicaCount: 2
 resources:
   limits:
     memory: 256Mi
