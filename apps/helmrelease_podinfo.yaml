@@ -24,3 +24,8 @@ spec:
         namespace: default 
       valuesFiles:
         - values.yaml
+  # This tells Flux WHERE to find 'values.yaml'
+  chartRef:
+    kind: GitRepository
+    [cite_start]name: podinfo        # This must match the name in your gitrepo_source.yaml
+    [cite_start]namespace: flux-system # This must match the namespace in your gitrepo_source.yaml
