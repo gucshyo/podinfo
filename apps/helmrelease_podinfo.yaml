@@ -21,6 +21,6 @@ spec:
       sourceRef:
         kind: HelmRepository
         name: localrepo
-        namespace: default
-  valuesFiles:
-    - values.yaml
+        namespace: default 
+      valuesFiles:
+        - values.yaml
