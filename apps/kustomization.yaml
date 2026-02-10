@@ -8,7 +8,4 @@ generatorOptions:
 
 resources:
 - helmrelease_podinfo.yaml
-configMapGenerator:
-  - name: podinfo-values
-    files:
-      - values.yaml # This file must exist in the same folder
+- values.yaml

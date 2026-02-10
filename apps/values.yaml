@@ -1,7 +1,14 @@
-replicaCount: 5
-resources:
-  limits:
-    memory: 256Mi
-  requests:
-    cpu: 100m
-    memory: 64Mi
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: podinfo-values
+  namespace: default
+data:
+  values.yaml: |
+    replicaCount: 5
+    resources:
+      limits:
+        memory: 256Mi
+      requests:
+        cpu: 100m
+        memory: 64Mi
