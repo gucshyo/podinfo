@@ -17,12 +17,10 @@ spec:
   chart:
     spec:
       chart: podinfo
-      version: ">5.0.0"
+      version: "6.3.5"
       sourceRef:
         kind: HelmRepository
         name: localrepo
         namespace: default
-  valuesFrom:
-  - kind: ConfigMap
-    name: podinfo-values
-    valuesKey: values.yaml
+  valuesFiles:
+    - values.yaml
