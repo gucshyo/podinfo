@@ -22,9 +22,7 @@ spec:
         kind: HelmRepository
         name: localrepo
         namespace: default
-  # This tells Flux to fetch values from your GitRepository source
   valuesFrom:
-    - kind: GitRepository
-      name: podinfo
-      namespace: flux-system
-      targetPath: apps/values.yaml
+    - kind: ConfigMap
+      name: podinfo-values # Kustomize handles the suffix matching
+      valuesKey: values.yaml

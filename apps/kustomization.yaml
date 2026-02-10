@@ -2,3 +2,7 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
 - helmrelease_podinfo.yaml
+configMapGenerator:
+  - name: podinfo-values
+    files:
+      - values.yaml # This file must exist in the same folder
