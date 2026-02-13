@@ -5,7 +5,7 @@ metadata:
   namespace: default
 data:
   values.yaml: |
-    replicaCount: 3
+    replicaCount: 5
     resources:
       limits:
         memory: 256Mi
